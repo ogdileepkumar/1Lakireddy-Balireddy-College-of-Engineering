@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080914">
+  <meta name="description" content="A little surprise and a big event invitation, made just for you.">
+  <title>A little surprise for you</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <div class="ambient ambient--three" aria-hidden="true"></div>
+  <div class="starfield" aria-hidden="true"></div>
+
+  <main class="experience">
+    <section class="screen screen--welcome is-active" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="glass-card welcome-card">
+        <img class="college-logo" src="college-logo.png" alt="Lakireddy Bali Reddy College of Engineering">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE SURPRISE</p>
+        <h1 id="welcome-title">Hi Junior! <span class="wave" aria-hidden="true">👋</span></h1>
+        <p class="intro">We have something exciting<br class="mobile-break"> for you<span class="ellipsis">...</span></p>
+
+        <form id="name-form" novalidate>
+          <label class="sr-only" for="guest-name">Enter your name</label>
+          <div class="input-wrap">
+            <span class="input-icon" aria-hidden="true">✦</span>
+            <input id="guest-name" name="name" type="text" placeholder="Enter your name"
+              autocomplete="given-name" maxlength="48" aria-describedby="name-error" required>
+          </div>
+          <p class="form-message" id="name-error" aria-live="polite"></p>
+          <button class="button button--primary button--wide" id="start-button" type="submit">
+            <span>Let's Go</span><span class="button-sparkle" aria-hidden="true">✨</span>
+          </button>
+        </form>
+        <p class="little-note"><span aria-hidden="true">✧</span> Made with a little extra magic</p>
+      </div>
+    </section>
+
+    <section class="screen screen--question" id="question-screen" aria-labelledby="question-title" hidden>
+      <div class="glass-card question-card">
+        <img class="college-logo" src="college-logo.png" alt="Lakireddy Bali Reddy College of Engineering">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR INVITATION AWAITS</p>
+        <p class="personal-greeting" id="personal-greeting">Hey, friend! <span aria-hidden="true">❤️</span></p>
+        <h2 id="question-title">Are you excited for the event? <span aria-hidden="true">🎉</span></h2>
+        <div class="answer-actions" id="answer-actions">
+          <button class="button button--primary button--yes" id="yes-button" type="button">
+            <span>YES! I'M EXCITED</span><span aria-hidden="true">🎊</span>
+          </button>
+          <button class="button button--quiet" id="no-button" type="button">NO <span aria-hidden="true">😅</span></button>
+        </div>
+        <div class="reconsider" id="reconsider-panel" hidden>
+          <p class="reconsider-message" role="status">Are you sure? 🥺 You're going to miss all the fun!</p>
+          <button class="button button--primary button--yes" id="reconsider-button" type="button">
+            Okay, I'm in! <span aria-hidden="true">🎉</span>
+          </button>
+        </div>
+        <p class="little-note"><span aria-hidden="true">✧</span> This is going to be unforgettable</p>
+      </div>
+    </section>
+
+    <section class="screen screen--poster" id="poster-screen" aria-labelledby="poster-title" hidden>
+      <div class="poster-content">
+        <p class="eyebrow poster-eyebrow"><span class="eyebrow-dot"></span> THE BIG REVEAL</p>
+        <h2 id="poster-title">LET'S MAKE IT<br class="mobile-break"> UNFORGETTABLE! <span aria-hidden="true">🎉</span></h2>
+        <div class="poster-frame" id="poster-frame">
+          <div class="poster-image-wrap">
+            <img class="poster-image" src="poster.jpg" alt="The event poster" id="poster-image">
+            <div class="poster-placeholder" id="poster-placeholder" hidden>
+              <span class="placeholder-icon" aria-hidden="true">✦</span>
+              <strong>Your event poster goes here</strong>
+              <span>Save your image beside index.html<br>and name it <code>poster.jpg</code></span>
+            </div>
+            <div class="light-sweep" aria-hidden="true"></div>
+          </div>
+        </div>
+        <p class="poster-message" id="poster-message">Get ready! An amazing experience awaits you!</p>
+        <button class="button button--replay" id="replay-button" type="button">
+          <span aria-hidden="true">↻</span> Experience it again
+        </button>
+      </div>
+      <canvas class="celebration-canvas" id="celebration-canvas" aria-hidden="true"></canvas>
+    </section>
+  </main>
+  <div class="sr-only" id="screen-announcer" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
